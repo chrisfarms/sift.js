@@ -159,6 +159,10 @@
 			if(value instanceof Date) {
 
 				return value.getTime();
+            
+            }else if(value && value.attributes) {
+
+                return value.attributes;
 			
 			} else {
 

@@ -265,6 +265,14 @@ vows.describe('Sifter').addBatch({
 				}, topic);
 
 				assert.equal(sifted.length, 1);
+			},
+            
+			'has sifted an object using RegExp': function(topic) {
+				var sifted = sift({
+					name: /cr/
+				}, topic);
+
+				assert.equal(sifted.length, 1);
 			}
 
 
